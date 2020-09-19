@@ -19,13 +19,12 @@ import {
   Icon24CommentOutline,
   Icon24LikeOutline,
   Icon24ShareOutline,
-  Icon24View, Icon28GlobeOutline
+  Icon24View
 } from "@vkontakte/icons";
 
-const Posts = ({id, go, currentSettings, setActivePanel}) => (
-
+const Posts = ({id, go, currentSettings}) => (
   <Panel className={'Posts__Panel'} id={id}>
-    <PanelHeader>{currentSettings.topic}</PanelHeader>
+    <PanelHeader left={<PanelHeaderBack onClick={go} data-to='map'/>}>{currentSettings.topic}</PanelHeader>
     <div className={'Posts'}>
       <div className={'Post'}>
         <SimpleCell description={"Час назад • " + currentSettings.mood.toLowerCase()}
@@ -55,11 +54,6 @@ const Posts = ({id, go, currentSettings, setActivePanel}) => (
 
         </div>
       </div>
-    </div>
-    <div onClick={(event) => {
-      event.preventDefault()
-      setActivePanel('map')}} className={'MapIcon'} >
-      <Icon28GlobeOutline/>
     </div>
   </Panel>
 );

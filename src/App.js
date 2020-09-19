@@ -4,12 +4,14 @@ import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
 import Map from './panels/Map'
+import Posts from './panels/Posts'
+import Home from './panels/Home/index.js'
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('map');
+	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
+	const [currentSettings, setCurrentSettings] = useState({topic: 'Фото', mood: 'Спокойное настроение'})
 
 	useEffect(() => {
 		bridge.subscribe(({ detail: { type, data }}) => {
@@ -28,8 +30,9 @@ const App = () => {
 
 	return (
 		<View activePanel={activePanel}>
-			<Home id='home' go={go} />
-			<Map id='map' go={go} />
+			<Home id='home' go={go} currentSettings={currentSettings} setActivePanel={setActivePanel}/>
+			<Map id='map' go={go} setCurrentSettings={setCurrentSettings} setActivePanel={setActivePanel}/>
+			<Posts id='posts' go={go} currentSettings={currentSettings}/>
 		</View>
 	);
 }

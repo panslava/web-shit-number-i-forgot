@@ -1,0 +1,20 @@
+.Posts {
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 100%;
+    flex-grow: 1;
+}
+
+.Post {
+    background-color: white;
+    margin-top: 12px;
+}
+
+.Posts__Panel .Panel__in {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Post .Avatar {
+    padding-right: 8px;
+}

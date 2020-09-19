@@ -1,5 +1,168 @@
-.Map {
+.Map__Overlay {
+    position: absolute;
+    /*overflow: auto;*/
+
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.Map .Panel__in {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .Map__img {
+    display: block;
+
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+}
+
+.Map__imgContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.Map__Div {
+    padding: 0;
+    position: relative;
+}
+
+
+.Content__overlay {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.Content__overlay .Card__in {
+    width: 100%;
+}
+
+.Map__MoodCircles {
+    overflow-x: scroll;
+    display: flex;
+    padding-top: 4px;
+}
+
+.Map__MoodCircle {
+    margin-left: 16px;
+}
+
+.Map__circle_carantine {
+    top:45%;
+    left:780px;
+}
+
+.Map__circle_large {
+    width: 140px;
+    height: 140px;
+}
+
+.Map__circle {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.08), 0 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+}
+
+.Map__circle_medium {
+    width: 100px;
+    height: 100px;
+}
+
+.Map__circle__smile {
+    margin-bottom: 2px;
+}
+
+.Map__circle_text {
+    margin-top: 4px;
+}
+
+.Map__circle_medium .Map__circle__smile {
+    font-size: 36px;
+}
+
+.Map__circle_medium .Map__circle__text {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.Map__circle_large .Map__circle__text {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.Map__circle_large .Map__circle__smile {
+    font-size: 48px;
+    line-height: 56px;
+}
+
+
+
+.Map__circle_small {
+    width: 88px;
+    height: 88px;
+}
+
+.Map__circle_small .Map__circle__smile {
+    font-size: 40px;
+}
+
+.Map__circle_IT {
+
+    top:41%;
+    left:700px;
+}
+
+.Map__coordinates {
+    transition: all ease-out 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    position: absolute;
+    z-index: 100;
+    margin: 8px;
+    background: #FFFFFF;
+    /* Elevation 8 pt · Cards */
+    width: 32px;
+    height: 32px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+}
+
+.Map__current_mood {
+    transition: all ease-in 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 300;
+    margin: 8px;
+    bottom: 170px;
+    background: #FFFFFF;
+    /* Elevation 8 pt · Cards */
+
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.08), 0px 2px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    height: 36px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
 }

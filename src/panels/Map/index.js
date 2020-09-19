@@ -28,12 +28,10 @@ const Map = ({id, go, setCurrentSettings, setActivePanel}) => {
 
       setTimeout(() => {
         scrollContainer.current.getElement().scrollTo(1640 / 2 - window.innerWidth / 2, 1640 / 2 - (window.innerHeight - 80) / 2)
-      }, 0)
+      }, 500)
 
-    }, []);
+    }, [scrollContainer.current]);
 
-    useEffect(() => {
-    }, [])
 
     const getMoodText = () => {
       if (scrollContainer && scrollContainer.current) {

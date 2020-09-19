@@ -9,6 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "vk-miniapps-deploy"
   },
+  "homepage": "https://panslava.github.io/web-shit-number-i-forgot",
   "keywords": [],
   "author": "",
   "license": "MIT",

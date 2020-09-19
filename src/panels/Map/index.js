@@ -150,7 +150,7 @@ const Map = ({id, go, setCurrentSettings, setActivePanel}) => {
 
           <div className={'Map__coordinates'}
                style={isSmilesShown ? {bottom: '150px', left: '50%', transform: 'translate(-50%, 0)'} : {
-                 bottom: '-10%',
+                 bottom: '0',
                  left: '50%',
                  transform: 'translate(-50%, 0)'
                }}>
